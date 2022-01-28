@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clAddSportRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvAddSportHeader"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:scaleType="center"
+        android:gravity="center"
+        android:text="Выбор Спорта"
+        android:textSize="28sp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp"
+        android:background="?attr/colorPrimary"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvChooseActivityLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvAddSportHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Выберите спортивное занятие"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAllSportsOptions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvChooseActivityLabel"
+        app:layout_constraintBottom_toTopOf="@id/tvChosenActivity"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:minHeight="150dp" />
+
+    <TextView
+        android:id="@+id/tvChosenActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        android:textColor="#777777"
+        app:layout_constraintBottom_toTopOf="@+id/tvEnterTimeLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Занятие пока не выбрано"
+        tools:text="Выбрано что-то очень длинное, да такое, что аж не видно"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvEnterTimeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/llTimeEditTexts"
+        android:text="Введите продолжительность занятия"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/llTimeEditTexts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llCancelConfirmButtons"
+        android:paddingHorizontal="16dp">
+
+        <EditText
+            android:id="@+id/etNumHours"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="Сколько часов"
+            android:autofillHints="hours"
+            android:imeOptions="actionNext"/>
+
+        <EditText
+            android:id="@+id/etNumMinutes"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:fontFamily="sans-serif"
+            android:hint="Сколько минут"
+            android:autofillHints="minutes"
+            android:imeOptions="actionDone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llCancelConfirmButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancelAddingSport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Отменить"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:autofillHints="hours" />
+
+        <Button
+            android:id="@+id/btnConfirmAddingSport"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Добавить"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif"
+            android:autofillHints="minutes" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

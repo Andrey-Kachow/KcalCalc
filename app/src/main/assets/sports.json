@@ -1,0 +1,53 @@
+{
+  "sports": [
+    {
+      "id": 1,
+      "name": "Медленная ходьба",
+      "kcalPerHour": 255
+    },{
+      "id": 2,
+      "name": "Бальные танцы",
+      "kcalPerHour": 273
+    },{
+      "id": 3,
+      "name": "Волейбол",
+      "kcalPerHour": 364
+    },{
+      "id": 4,
+      "name": "Силовая йога",
+      "kcalPerHour": 364
+    },{
+      "id": 5,
+      "name": "Бег на эллипсе",
+      "kcalPerHour": 455
+    },{
+      "id": 6,
+      "name": "Силовые упражнения",
+      "kcalPerHour": 455
+    },{
+      "id": 7,
+      "name": "Плавание",
+      "kcalPerHour": 528
+    },{
+      "id": 8,
+      "name": "Баскетбол",
+      "kcalPerHour": 728
+    },{
+      "id": 9,
+      "name": "Быстрый бег",
+      "kcalPerHour": 1074
+    },{
+      "id": 10,
+      "name": "Упражнения со скакалкой",
+      "kcalPerHour": 1074
+    },{
+      "id": 11,
+      "name": "Теннис",
+      "kcalPerHour": 728
+    },{
+      "id": 12,
+      "name": "Велопрогулка",
+      "kcalPerHour": 364
+    }
+  ]
+}
